@@ -1,0 +1,38 @@
+.menu-button {
+  display: block;
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding-left: 15px;
+  margin-bottom: 2px;
+  background-color: rgb(58, 73, 140);
+  border-width: 1px;
+}
+.menu-button:hover {
+  background-color: rgb(54, 132, 209);
+}
+/* .menu-button:focus {
+  background-color: rgb(250, 251, 252);
+} */
+* {
+  box-sizing: border-box;
+}
+mat-icon {
+  color: lightgray;
+  vertical-align: middle;
+  font-size: 400px;
+  text-align: center;
+}
+.user {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+.loggedUser {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+span {
+  color: rgb(255, 255, 255);
+}

@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body> -->
+<div class="editaddForm">
+  <form class="form-group" [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <mat-card appearance="outlined">
+      <mat-card-title>Add user</mat-card-title>
+      <div class="column">
+        <div class="container">
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input
+              maxLength="25"
+              matInput
+              placeholder="Add..."
+              type="text"
+              formControlName="name"
+            />
+            <mat-icon matSuffix></mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="container">
+          <mat-form-field appearance="outline">
+            <mat-label>Surname</mat-label>
+            <input
+              maxLength="25"
+              matInput
+              placeholder="Add..."
+              type="text"
+              formControlName="fname"
+            />
+            <mat-icon matSuffix></mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="container">
+          <mat-form-field appearance="outline">
+            <mat-label>Division</mat-label>
+            <mat-select formControlName="division">
+              <mat-option value="Warehouse">Warehouse</mat-option>
+              <mat-option value="HR">HR</mat-option>
+              <mat-option value="Account">Account</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="container">
+          <mat-form-field appearance="outline">
+            <mat-label>Position</mat-label>
+            <mat-select formControlName="position">
+              <mat-option value="Lider">Lider</mat-option>
+              <mat-option value="Coordinator">Coordinator</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="column2">
+        <div class="container">
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input
+              [readonly]="true"
+              maxLength="25"
+              matInput
+              placeholder="Add..."
+              type="text"
+              formControlName="username"
+            />
+            <mat-icon matSuffix></mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="container">
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              maxLength="25"
+              matInput
+              placeholder="Add..."
+              type="text"
+              formControlName="password"
+            />
+            <mat-icon matSuffix></mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div class="container">
+          <mat-form-field appearance="outline">
+            <mat-label>Authority</mat-label>
+            <mat-select formControlName="authority">
+              <mat-option value="ROLE_ADMIN">ROLE_ADMIN</mat-option>
+              <mat-option value="ROLE_USER">ROLE_USER</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="container">
+          <mat-form-field appearance="outline">
+            <mat-label>Enabled</mat-label>
+            <mat-select formControlName="enabled">
+              <mat-option value="true">true</mat-option>
+              <mat-option value="false">false</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn btn-success">
+        <mat-icon>done</mat-icon>Ok
+      </button>
+    </mat-card>
+  </form>
+</div>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Equipment</h2>
+      <p>Equipment in database</p>
+      <button
+        id="add"
+        type="button"
+        (click)="aadEquipment()"
+        class="btn btn-success"
+      >
+        <mat-icon>add</mat-icon>
+        Add equipment
+      </button>
+      <table matSort class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Equipment name</th>
+            <th>Model</th>
+            <th>Serial number</th>
+            <th>Registration</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let o of obj">
+            <td>{{ o.id }}</td>
+            <td>{{ o.ename }}</td>
+            <td>{{ o.model }}</td>
+            <td>{{ o.snumber }}</td>
+            <td>{{ o.registration }}</td>
+            <td>
+              <button
+                id="edit{{ o.ename }}{{ o.model }}"
+                type="button"
+                (click)="editEquipment(o.id)"
+                class="btn btn-warning me-5 ms-5"
+              >
+                Edit
+              </button>
+
+              <button
+                id="{{ o.ename }}{{ o.model }}"
+                type="button"
+                (click)="deleteEquipment(o.id)"
+                class="btn btn-danger primary"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container2">
+      <button
+        id="get"
+        mat-raised-button
+        color="primary"
+        type="button"
+        class="btn btn-primary"
+        (click)="getEquipment()"
+      >
+        <mat-icon>history</mat-icon>
+        Get Equipment
+      </button>
+    </div>
+    <!-- <button class="btn" (click)="eq()"></button>
+    <p>{{ a }}</p> -->
+  </body>
+</html>

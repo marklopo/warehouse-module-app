@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <h2>Raports</h2>
+    <p>Raport of inspections</p>
+    <div class="table-responsive">
+      <button
+        type="button"
+        (click)="aadInspection()"
+        class="btn btn btn-success"
+      >
+        <mat-icon>add</mat-icon> Add inspection</button
+      ><br /><br /><br />
+      <mat-card appearance="outlined">
+        <table
+          class="table table-dark table-sm table-striped table-condensed table-hover text-center"
+        >
+          <thead class="thead-dark">
+            <tr>
+              <th>Id</th>
+              <th>Date</th>
+              <th>Eq. name</th>
+              <th>Model</th>
+              <th>Serial number</th>
+              <th>Reg.</th>
+              <th>Name</th>
+              <th>Familly name</th>
+              <th>Division</th>
+              <th>Position</th>
+              <th>Body</th>
+              <th>Wheel</th>
+              <th>Brake</th>
+              <th>Light</th>
+              <th>Horn</th>
+              <th>Belt</th>
+              <th>Leak</th>
+              <th>Battery</th>
+              <th>Status</th>
+              <th>Comments</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for( o of obj; track o) {
+            <tr>
+              <td>{{ o.id }}</td>
+              <td width="400 px">{{ o.date }}</td>
+              <td>{{ o.ename }}</td>
+              <td>{{ o.model }}</td>
+              <td>{{ o.snumber }}</td>
+              <td>{{ o.registration }}</td>
+              <td>{{ o.name }}</td>
+              <td>{{ o.fname }}</td>
+              <td>{{ o.division }}</td>
+              <td>{{ o.position }}</td>
+              <td>{{ o.body }}</td>
+              <td>{{ o.wheel }}</td>
+              <td>{{ o.brake }}</td>
+              <td>{{ o.light }}</td>
+              <td>{{ o.horn }}</td>
+              <td>{{ o.belt }}</td>
+              <td>{{ o.leak }}</td>
+              <td>{{ o.battery }}</td>
+              <td>{{ o.status }}</td>
+              <td width="300 px">{{ o.comments }}</td>
+
+              <td width="250 px">
+                <button
+                  id="edit"
+                  class="action-button"
+                  type="button"
+                  (click)="editInspection(o.id)"
+                  class="btn btn-warning me-3 ms-3"
+                >
+                  Edit
+                </button>
+                <button
+                  id="delete"
+                  type="button"
+                  (click)="deleteInspection(o.id)"
+                  class="btn btn-danger primary"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+        <br />
+        <button
+          mat-raised-button
+          color="primary"
+          type="button"
+          class="btn btn-primary"
+          (click)="getInspection()"
+        >
+          <mat-icon>history</mat-icon>
+          Get Inspection
+        </button>
+      </mat-card>
+    </div>
+    <!-- </body>
+</html> -->
+  </body>
+</html>

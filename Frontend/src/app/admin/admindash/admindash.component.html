@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Equipment</mat-card-title>
+      <mat-card-subtitle>Quantity</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <h5>
+        {{ countEquipment }}
+      </h5>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button [routerLink]="['/dash/equipment']">More</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Users</mat-card-title>
+      <mat-card-subtitle>Quantity</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <h5>{{ countUsers }}</h5>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button [routerLink]="['/dash/users']">More</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Inspections</mat-card-title>
+      <mat-card-subtitle>Last inspection</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <h5>{{ lastDate }}</h5>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button [routerLink]="['/dash/inspection']">More</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Inspections</mat-card-title>
+      <mat-card-subtitle>Errors</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <h5>{{ countError }}</h5>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button [routerLink]="['/dash/inspection']">More</button>
+    </mat-card-actions>
+  </mat-card>
+</html>

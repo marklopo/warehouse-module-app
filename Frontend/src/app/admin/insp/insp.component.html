@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <form [formGroup]="inspectionForm" (ngSubmit)="onSubmit()">
+      <div class="form1">
+        <div class="eq">
+          <select formControlName="registration" (click)="getEquipment()">
+            <option value="" disabled>--Select--</option>
+            <option *ngFor="let o of obj" value="{{ o.id }}">
+              {{ o.registration }}
+            </option>
+          </select>
+
+          <input class="eq1" formControlName="ename" [readonly]="true" />
+          <input class="eq1" formControlName="snumber" [readonly]="true" />
+          <input class="eq1" formControlName="model" [readonly]="true" />
+          <input class="eq1" placeholder="Hours" />
+        </div>
+        <div class="option">
+          <label>Status body</label>
+          <div>
+            <label class="container"
+              >Ok
+              <input
+                type="radio"
+                name="body"
+                formControlName="body"
+                value="Ok"
+                (change)="checkStatus($event)"
+              />
+
+              <span class="checkmark"></span>
+            </label>
+            <label class="container2"
+              >NOk
+              <input
+                type="radio"
+                name="body"
+                formControlName="body"
+                value="Nok"
+                (change)="checkStatus($event)"
+              />
+              <span class="checkmark2"></span> </label
+            ><br /><br />
+            <input
+              type="hidden"
+              formControlName="body2"
+              placeholder="Not checked"
+            />
+          </div>
+        </div>
+
+        <div class="option">
+          <label>Status lights</label>
+          <div>
+            <label class="container"
+              >Ok
+              <input
+                type="radio"
+                name="light"
+                formControlName="light"
+                value="Ok"
+                (change)="checkStatus($event)"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container2"
+              >NOk
+              <input
+                type="radio"
+                name="light"
+                formControlName="light"
+                value="Nok"
+                (change)="checkStatus($event)"
+              />
+              <span class="checkmark2"></span>
+            </label>
+            <input
+              type="hidden"
+              formControlName="light2"
+              placeholder="Not checked"
+            /><br /><br />
+          </div>
+        </div>
+
+        <div class="option">
+          <label>Status breaks</label>
+          <div>
+            <label class="container"
+              >Ok
+              <input
+                type="radio"
+                (change)="checkStatus($event)"
+                name="brake"
+                formControlName="brake"
+                value="Ok"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container2"
+              >NOk
+              <input
+                type="radio"
+                name="brake"
+                formControlName="brake"
+                (change)="checkStatus($event)"
+                value="Nok"
+              />
+              <span class="checkmark2"></span> </label
+            ><input
+              type="hidden"
+              formControlName="brake2"
+              placeholder="Not checked"
+            /><br /><br />
+          </div>
+        </div>
+
+        <div class="option">
+          <label>Status wheels</label>
+          <div>
+            <label class="container"
+              >Ok
+              <input
+                type="radio"
+                name="wheel"
+                (change)="checkStatus($event)"
+                formControlName="wheel"
+                value="Ok"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container2"
+              >NOk
+              <input
+                type="radio"
+                name="wheel"
+                formControlName="wheel"
+                value="Nok"
+                (change)="checkStatus($event)"
+              />
+              <span class="checkmark2"></span> </label
+            ><input
+              type="hidden"
+              formControlName="wheel2"
+              placeholder="Not checked"
+            /><br /><br />
+          </div>
+        </div>
+
+        <div class="option">
+          <label>Status horn</label>
+          <div>
+            <label class="container"
+              >Ok
+              <input
+                type="radio"
+                name="horn"
+                (change)="checkStatus($event)"
+                formControlName="horn"
+                value="Ok"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container2"
+              >NOk
+              <input
+                type="radio"
+                name="horn"
+                formControlName="horn"
+                value="Nok"
+                (change)="checkStatus($event)"
+              />
+              <span class="checkmark2"></span> </label
+            ><input
+              type="hidden"
+              formControlName="horn2"
+              placeholder="Not checked"
+            /><br /><br />
+          </div>
+        </div>
+
+        <div class="option">
+          <label>Status belts</label>
+          <div>
+            <label class="container"
+              >Ok
+              <input
+                type="radio"
+                name="belt"
+                formControlName="belt"
+                value="Ok"
+                (change)="checkStatus($event)"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container2"
+              >NOk
+              <input
+                type="radio"
+                name="belt"
+                formControlName="belt"
+                value="Nok"
+                (change)="checkStatus($event)"
+              />
+              <span class="checkmark2"></span> </label
+            ><input
+              type="hidden"
+              formControlName="belt2"
+              placeholder="Not checked"
+            /><br /><br />
+          </div>
+        </div>
+
+        <div class="option">
+          <label>Status leaks</label>
+          <div>
+            <label class="container"
+              >Ok
+              <input
+                type="radio"
+                name="leak"
+                formControlName="leak"
+                (change)="checkStatus($event)"
+                value="Ok"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container2"
+              >NOk
+              <input
+                type="radio"
+                name="leak"
+                formControlName="leak"
+                (change)="checkStatus($event)"
+                value="Nok"
+              />
+              <span class="checkmark2"></span> </label
+            ><input
+              type="hidden"
+              formControlName="leak2"
+              placeholder="Not checked"
+            /><br /><br />
+          </div>
+        </div>
+
+        <div class="option">
+          <label>Status battery</label>
+          <div>
+            <label class="container"
+              >Ok
+              <input
+                type="radio"
+                name="battery"
+                (change)="checkStatus($event)"
+                formControlName="battery"
+                value="Ok"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container2"
+              >NOk
+              <input
+                type="radio"
+                name="battery"
+                (change)="checkStatus($event)"
+                formControlName="battery"
+                value="Nok"
+              />
+              <span class="checkmark2"></span> </label
+            ><input
+              type="hidden"
+              formControlName="battery2"
+              placeholder="Not checked"
+            /><br /><br />
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="hidden" placeholder="Status" formControlName="status" />
+        </div>
+        <div class="form-group">
+          <input
+            id="comments"
+            type="text"
+            placeholder="Comments"
+            formControlName="comments"
+          />
+        </div>
+        <input class="eq1" type="hidden" formControlName="name" />
+        <input class="eq1" type="hidden" formControlName="fname" />
+        <input class="eq1" type="hidden" formControlName="position" />
+        <input class="eq1" type="hidden" formControlName="division" />
+        <button type="submit" mat-button>Add Raport</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body> -->
+<div class="editaddForm">
+  <form class="form-group" [formGroup]="equipmentForm" (ngSubmit)="onSubmit()">
+    <mat-card appearance="outlined">
+      <mat-card-title>Add equipment</mat-card-title>
+
+      <div class="container">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input
+            id="ename"
+            maxLength="25"
+            matInput
+            placeholder="Add..."
+            type="text"
+            formControlName="ename"
+          />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="container">
+        <mat-form-field appearance="outline">
+          <mat-label>Model</mat-label>
+          <input
+            id="model"
+            maxLength="25"
+            matInput
+            placeholder="Add..."
+            type="text"
+            formControlName="model"
+          />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="container">
+        <mat-form-field appearance="outline">
+          <mat-label>Serial number</mat-label>
+          <input
+            id="snumber"
+            maxLength="25"
+            matInput
+            placeholder="Add..."
+            type="text"
+            formControlName="snumber"
+          />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="container">
+        <mat-form-field appearance="outline">
+          <mat-label>Registration</mat-label>
+          <input
+            id="reg"
+            maxLength="25"
+            matInput
+            placeholder="Add..."
+            type="text"
+            formControlName="registration"
+          />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+
+      <button id="ok" type="submit" class="btn btn btn-success">
+        <mat-icon>done</mat-icon>Ok
+      </button>
+    </mat-card>
+  </form>
+</div>

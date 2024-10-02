@@ -1,0 +1,62 @@
+.logo {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.form-group {
+  /* border: 3px solid lightgray;
+  background: rgb(240, 236, 236); */
+  padding: 16px 16px;
+  width: 500px;
+  height: 20%;
+  text-align: left;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+} */
+button {
+  background-color: darkslategrey;
+  color: white;
+  padding: 16px 16px;
+  margin-bottom: 5%;
+  margin-left: 3%;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  border-radius: 5px;
+  font-size: large;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+mat-form-field {
+  width: 90%;
+  height: 90%;
+  margin-top: 5px;
+  padding: 16px 16px;
+}
+mat-card-title {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}

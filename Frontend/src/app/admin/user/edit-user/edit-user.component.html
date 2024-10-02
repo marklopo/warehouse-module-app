@@ -1,0 +1,131 @@
+<!-- <p>edit-user works!</p>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+<div class="editUserForm">
+  <mat-card appearance="outlined">
+    <mat-card-title>Edit user</mat-card-title>
+    <mat-card-content>
+      <form class="form" [formGroup]="editForm" (ngSubmit)="edit()">
+        <div *ngIf="user">
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input
+                maxLength="25"
+                matInput
+                placeholder="Edit..."
+                oninput="this.value = this.value.toUpperCase()"
+                type="text"
+                formControlName="name"
+                [(ngModel)]="user.name"
+              />
+              <mat-icon matSuffix></mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Surname</mat-label>
+              <input
+                maxLength="25"
+                matInput
+                placeholder="Edit..."
+                oninput="this.value = this.value.toUpperCase()"
+                type="text"
+                formControlName="fname"
+                [(ngModel)]="user.fname"
+              />
+              <mat-icon matSuffix></mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Username</mat-label>
+              <input
+                [readonly]="true"
+                maxLength="25"
+                matInput
+                placeholder="Edit..."
+                type="text"
+                formControlName="username"
+                [(ngModel)]="user.username"
+              />
+              <mat-icon matSuffix></mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input
+                maxLength="25"
+                matInput
+                placeholder="Edit..."
+                type="text"
+                formControlName="password"
+                [(ngModel)]="user.password"
+              />
+              <mat-icon matSuffix></mat-icon>
+            </mat-form-field>
+          </div>
+
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Enabled</mat-label>
+              <mat-select formControlName="enabled" [(ngModel)]="user.enabled">
+                <mat-option value="true">true</mat-option>
+                <mat-option value="false">false</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Authority</mat-label>
+              <mat-select
+                formControlName="authority"
+                [(ngModel)]="user.authority"
+              >
+                <mat-option value="ROLE_ADMIN">ROLE_ADMIN</mat-option>
+                <mat-option value="ROLE_USER">ROLE_USER</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Division</mat-label>
+              <mat-select
+                formControlName="division"
+                [(ngModel)]="user.division"
+              >
+                <mat-option value="Warehouse">Warehouse</mat-option>
+                <mat-option value="HR">HR</mat-option>
+                <mat-option value="Account">Account</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Position</mat-label>
+              <mat-select
+                formControlName="position"
+                [(ngModel)]="user.position"
+              >
+                <mat-option value="Lider">Lider</mat-option>
+                <mat-option value="Coordinator">Coordinator</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <button type="submit" class="btn btn btn-success">
+          <mat-icon>edit</mat-icon>Edit
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

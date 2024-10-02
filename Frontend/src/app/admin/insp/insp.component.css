@@ -1,0 +1,125 @@
+.container {
+  position: absolute;
+  display: block;
+  padding-left: 35px;
+  padding-top: 5px;
+  margin-bottom: 0px;
+
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container2 {
+  position: absolute;
+  display: block;
+  padding-left: 35px;
+  padding-top: 4px;
+  margin-bottom: 0px;
+  float: left;
+  margin-top: 0px;
+  margin-right: 60%;
+  margin-left: 100px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  margin-top: -115px;
+}
+/* Hide the browser's default radio button */
+.container input,
+.container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark,
+.checkmark2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark,
+.container2:hover input ~ .checkmark2 {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #1ae90f;
+}
+.container2 input:checked ~ .checkmark2 {
+  background-color: rgb(255, 8, 8);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after,
+.checkmark2:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after,
+.container2 input:checked ~ .checkmark2:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after,
+.container2 .checkmark2:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+.option {
+  width: 180px;
+  border: 3px solid lightgray;
+  padding-left: 15px;
+  padding-top: 1px;
+  height: 55px;
+  margin-left: 20%;
+  margin-top: 1px;
+}
+.form1 {
+  border: 3px solid lightgray;
+  padding: 1px 1px;
+  width: 70%;
+  margin-left: 10%;
+  height: 80%;
+  text-align: left;
+}
+.eq1 {
+  width: 15%;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-top: 1px;
+}
+#comments {
+  width: 90%;
+  font-size: large;
+  margin-top: 5px;
+}

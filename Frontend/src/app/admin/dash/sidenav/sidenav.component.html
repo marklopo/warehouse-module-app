@@ -1,0 +1,30 @@
+<body>
+  <mat-sidenav-container class="container">
+    <mat-sidenav #sidebar mode="side" opened>
+      <app-navbar></app-navbar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content">
+        <div class="toolbar">
+          <mat-toolbar>
+            <mat-icon (click)="sidebar.toggle()"> menu </mat-icon>
+            <div class="box">
+              <mat-icon>person</mat-icon>{{ role }}
+
+              <button
+                mat-raised-button
+                matTooltip="Logout"
+                (click)="clearSession()"
+              >
+                <mat-icon>exit_to_app</mat-icon>
+              </button>
+            </div>
+          </mat-toolbar>
+        </div>
+        <div class="main">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</body>

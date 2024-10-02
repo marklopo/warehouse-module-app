@@ -1,0 +1,63 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  margin-left: 16px;
+}
+.table-responsive {
+  /* border: 3px solid lightgray;
+  background: rgb(240, 236, 236); */
+  /* margin-left: 0%;
+  width: 95%;
+
+  border: 3px solid lightgray;
+  background: rgb(240, 236, 236);
+  color: black; */
+  width: 100%;
+  padding: 16px 16px;
+  text-align: left;
+  top: 50%;
+  margin-left: 0%;
+}
+mat-card-title {
+  margin-left: 10px;
+  margin-bottom: 10 px;
+  font-size: large;
+}
+
+.column {
+  float: left;
+  width: 45%;
+  border: 3px solid lightgray;
+  padding-left: 5px;
+  margin-left: 5px;
+}
+input[type="text"] {
+  width: 35%;
+  padding: 12px 20px;
+  color: black;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: darkslategrey;
+  float: left;
+  color: white;
+  padding: 14px 20px;
+  margin: 2px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+#edit,
+#delete {
+  width: 40%;
+  margin-left: 2px;
+}
+button:hover {
+  opacity: 0.8;
+}

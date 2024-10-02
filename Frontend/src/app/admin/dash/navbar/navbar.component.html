@@ -1,0 +1,47 @@
+<div class="navbar">
+  <br />
+  <div class="user">
+    <span>MagAsyst 1.0</span>
+  </div>
+  <div class="menu">
+    <div class="manu-head"></div>
+
+    <div class="manu-item">
+      <button mat-button class="menu-button" [routerLink]="['/dash/admindash']">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span></button
+      ><br />
+
+      <button
+        mat-button
+        id="1"
+        class="menu-button"
+        [routerLink]="['/dash/users']"
+      >
+        <mat-icon>group</mat-icon>
+        <span>All users</span>
+      </button>
+      <div class="manu-item">
+        <button
+          mat-button
+          class="menu-button"
+          [routerLink]="['/dash/equipment']"
+        >
+          <mat-icon>directions_car</mat-icon>
+          <span>All equipment</span>
+        </button>
+
+        <div class="manu-item">
+          <button
+            mat-button
+            class="menu-button"
+            [routerLink]="['/dash/inspection']"
+          >
+            <mat-icon>insert_drive_file</mat-icon>
+            <span>Raport of inspection</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

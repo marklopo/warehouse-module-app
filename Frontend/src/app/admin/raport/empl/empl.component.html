@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Employees</h2>
+      <p>Persons in database</p>
+      <button type="button" (click)="aadCust()" class="btn btn btn-success">
+        <mat-icon>add</mat-icon>
+        Add user
+      </button>
+      <table matSort class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th mat-sort-header="name">Name</th>
+            <th>Familly name</th>
+            <th>Division</th>
+            <th>Position</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Enabled</th>
+            <th>Authority</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for( o of obj; track o){
+          <tr>
+            <td>{{ o.id }}</td>
+            <td>{{ o.name }}</td>
+            <td>{{ o.fname }}</td>
+            <td>{{ o.division }}</td>
+            <td>{{ o.position }}</td>
+            <td>{{ o.username }}</td>
+            <td>{{ o.password }}</td>
+            <td>{{ o.enabled }}</td>
+            <td>{{ o.authority }}</td>
+            <td>
+              <button
+                id="edit"
+                type="button"
+                (click)="editCust(o.id)"
+                class="btn btn-warning me-5 ms-5"
+              >
+                Edit
+              </button>
+              <button
+                id="delete"
+                type="button"
+                (click)="deleteCust(o.id)"
+                (click)="deleteAuth(o.username)"
+                class="btn btn-danger primary"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container2">
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        class="btn btn-primary"
+        (click)="getCustomers()"
+      >
+        <mat-icon>history</mat-icon>
+        Get Employees
+      </button>
+    </div>
+  </body>
+</html>

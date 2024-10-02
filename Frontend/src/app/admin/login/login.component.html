@@ -1,0 +1,49 @@
+<div>
+  <h2 class="logo">
+    MagAsyst<br />
+    <p>Your partner in buissnes</p>
+  </h2>
+</div>
+
+<form [formGroup]="form1" (ngSubmit)="doLogin()">
+  <div class="form-group">
+    <mat-card appearance="outlined">
+      <mat-card-title>Login</mat-card-title>
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input
+          id="username"
+          maxLength="25"
+          matInput
+          placeholder=""
+          type="text"
+          formControlName="username"
+          required
+        />
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          maxLength="25"
+          matInput
+          placeholder=""
+          type="password"
+          formControlName="password"
+          required
+          id="password"
+        />
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+      <button
+        type="submit"
+        (click)="doLogin()"
+        class="form-control3"
+        value="Log in"
+        id="button"
+      >
+        Login
+      </button>
+    </mat-card>
+  </div>
+</form>

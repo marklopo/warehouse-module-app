@@ -1,0 +1,87 @@
+<!-- <p>edit-equipment works!</p>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+<div class="editUserForm">
+  <mat-card appearance="outlined">
+    <mat-card-title>Edit equipment</mat-card-title>
+    <mat-card-content>
+      <form class="form" [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <div *ngIf="equipment">
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input
+                id="ename"
+                maxLength="25"
+                matInput
+                placeholder="Edit..."
+                oninput="this.value = this.value.toUpperCase()"
+                type="text"
+                formControlName="ename"
+                [(ngModel)]="equipment.ename"
+              />
+              <mat-icon matSuffix></mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Model</mat-label>
+              <input
+                id="model"
+                maxLength="25"
+                matInput
+                placeholder="Edit..."
+                oninput="this.value = this.value.toUpperCase()"
+                type="text"
+                formControlName="model"
+                [(ngModel)]="equipment.model"
+              />
+              <mat-icon matSuffix></mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Serial number</mat-label>
+              <input
+                id="snumber"
+                maxLength="25"
+                matInput
+                placeholder="Edit..."
+                oninput="this.value = this.value.toUpperCase()"
+                type="text"
+                formControlName="snumber"
+                [(ngModel)]="equipment.snumber"
+              />
+              <mat-icon matSuffix></mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="container">
+            <mat-form-field appearance="outline">
+              <mat-label>Registration</mat-label>
+              <input
+                id="reg"
+                maxLength="25"
+                matInput
+                placeholder="Edit..."
+                oninput="this.value = this.value.toUpperCase()"
+                type="text"
+                formControlName="registration"
+                [(ngModel)]="equipment.registration"
+              />
+              <mat-icon matSuffix></mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+        <button id="edit" type="submit" class="btn btn btn-success">
+          <mat-icon>edit</mat-icon>Edit
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
