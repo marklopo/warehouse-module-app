@@ -1,0 +1,28 @@
+version: "3"
+services:
+  dockerapp:
+    image: dockerapp
+
+    ports:
+      - 8000:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/testdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    depends_on:
+      - docker-mysql
+    networks:
+      - default
+
+  docker-mysql:
+    image: mysql
+
+    environment:
+      - MYSQL_ROOT_PASSWORD = root
+      - MYSQL_DATABASE = testdb
+      - MYSQL_PASSWORD = root
+      - DATABASE_HOST = docker-mysql
+    ports:
+      - 3308:3306
+    networks:
+      - default
