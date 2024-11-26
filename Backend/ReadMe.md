@@ -6,6 +6,7 @@ The application can be an example of the design of one of the modules of the War
 Backend:
 Languages: Java SE, SQL; 
 Framework: Eclipse, Spring Tool Suite, Hibernate, Spring(Data, MVC, Security, Boot, Cache - Ehcache), Gradle; 
+Container service provider: Docker (Docker Desktop);
 Database: MySQL; 
 Libraries: Lombok; 
 Tests: JUnit, Postman;
